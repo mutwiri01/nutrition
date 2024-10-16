@@ -78,7 +78,7 @@ const Header = () => {
   return (
     <HeaderContainer>
       <Nav>
-        <Logo to="/"><FaLeaf style={{ marginRight: '0.5rem' }} />Nutritional Healthcare </Logo>
+        <Logo to="/"><FaLeaf style={{ marginRight: '0.5rem' }} />Healthcare Nutritional  </Logo>
         <MenuButton onClick={toggleMenu}>☰</MenuButton>
         <NavLinks isOpen={isMenuOpen}>
           <NavLink to="/health-coaching">Health Coaching</NavLink>

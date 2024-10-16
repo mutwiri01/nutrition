@@ -1,14 +1,12 @@
 
 import { FaAppleAlt, FaCarrot, FaHeartbeat } from 'react-icons/fa'
-import healthcareImage from '../assets/h2.png' // Ensure the path is correct
 import '../css/home.css' // Import the CSS file
 
 const Home = () => {
   return (
     <div className="page-container">
-      <div className="header-container">
+      <div >
         <h1 className="title">Centre for Nutritional Healthcare</h1>
-        <img src={healthcareImage} alt="Healthcare Facility" className="image" />
       </div>
 
       <p className="subtitle">
