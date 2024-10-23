@@ -1,20 +1,4 @@
-/* Campaign.css */
-.page-container {
-  width: 100%;
-  max-width: 1200px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 2rem;
-  box-sizing: border-box;
-}
-
-.title {
-  color: #4caf50;
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
-  text-align: center;
-}
+/* ... existing styles ... */
 
 .grid {
   display: grid;
@@ -24,49 +8,48 @@
 }
 
 .card {
+  cursor: pointer;
   background-color: #e8f5e9;
   border-radius: 8px;
   padding: 1.5rem;
   text-align: center;
-  transition: transform 0.3s;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .card:hover {
   transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.icon {
-  width: 50px;
-  height: 50px;
-  margin-bottom: 1rem;
+/* Responsive layout for small screens */
+@media (max-width: 600px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form {
+    width: 100%;
+  }
 }
 
-.card-title {
+.food-justice-section {
+  margin-top: 2rem;
+  padding: 1rem;
+  background-color: #f1f8e9;
+  border-radius: 8px;
+}
+
+.food-justice-section h2,
+.food-justice-section h3 {
+  color: #388e3c;
+}
+
+.food-justice-section p {
   color: #2c3e50;
-  margin-bottom: 1rem;
+  line-height: 1.6;
 }
 
-.list {
-  list-style-type: none;
-  padding: 0;
-  text-align: left;
-}
-
-.list-item {
-  margin-bottom: 0.5rem;
-  display: flex;
-  align-items: center;
-}
-
-.list-item:before {
-  content: "•";
-  color: #4caf50;
-  font-weight: bold;
-  display: inline-block;
-  width: 1em;
-  margin-right: 0.5em;
-}
-
+/* Form Styles */
 .form {
   display: flex;
   flex-direction: column;
@@ -95,32 +78,4 @@ button {
 
 button:hover {
   background-color: #45a049;
-}
-/* Add this to your Campaign.css */
-.food-justice-section {
-  margin-top: 2rem;
-  padding: 1rem;
-  background-color: #f1f8e9;
-  border-radius: 8px;
-}
-
-.food-justice-section h2 {
-  color: #388e3c;
-  margin-bottom: 1rem;
-}
-
-.food-justice-section p {
-  margin-bottom: 1rem;
-  color: #2c3e50;
-  line-height: 1.6;
-}
-
-.food-justice-section h3 {
-  color: #2c3e50;
-  margin-top: 1.5rem;
-}
-.icon {
-  font-size: 3rem;
-  color: #388e3c;
-  margin-bottom: 1rem;
 }

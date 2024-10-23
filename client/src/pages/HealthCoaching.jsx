@@ -1,6 +1,6 @@
 import { useState } from 'react';
+import { FaHeartbeat, FaUser, FaBuilding } from 'react-icons/fa';  // Importing the icons
 import '../css/healthcoaching.css';
-import coaching from '../assets/c1.jpg';
 
 const HealthCoaching = () => {
   const [activeSection, setActiveSection] = useState('personal');
@@ -11,21 +11,24 @@ const HealthCoaching = () => {
 
   return (
     <div className="page-container">
-      {/* Image at the top */}
-      <img src={coaching} alt="Health Coaching" className="image" />
+      {/* Title with icon */}
+      <div className="title-container">
+        <FaHeartbeat className="title-icon" /> {/* Health coaching icon */}
+        <h1 className="title">Health Coaching</h1>
+      </div>
 
-      <h1 className="title">Health Coaching</h1>
-
-      {/* Toggle buttons */}
+      {/* Toggle buttons with icons */}
       <div className="toggle-buttons">
         <button 
           className={`button ${activeSection === 'personal' ? 'active' : ''}`} 
           onClick={() => switchSection('personal')}>
+          <FaUser className="button-icon" /> {/* Personal coaching icon */}
           Personal Coaching
         </button>
         <button 
           className={`button ${activeSection === 'corporate' ? 'active' : ''}`} 
           onClick={() => switchSection('corporate')}>
+          <FaBuilding className="button-icon" /> {/* Corporate coaching icon */}
           Corporate Coaching
         </button>
       </div>
@@ -43,16 +46,14 @@ const HealthCoaching = () => {
           <p>
             Centre for Nutritional Healthcare offers individual health coaching programs tailored to help you overcome health threats and challenges through behavior and lifestyle change. These programs will address primary and secondary food as stimulants for change in the body.
           </p>
-
-          {/* Health History Form */}
           <div className="form-container">
-            <h2>Health History Form</h2>
+            <h2>Health Goals</h2>
             <form className="form">
               <input type="text" placeholder="Full Name" className="input" required />
               <input type="email" placeholder="Email" className="input" required />
               <input type="tel" placeholder="Phone Number" className="input" />
               <textarea placeholder="Describe your current health concerns and goals" rows="5" className="textarea" required />
-              <button type="submit" className="submit-button">Submit Health History</button>
+              <button type="submit" className="submit-button">Submit</button>
             </form>
           </div>
         </div>
@@ -60,7 +61,7 @@ const HealthCoaching = () => {
         <div className="section">
           <h2>Corporate Health Coaching</h2>
           <p>
-            A healthy workforce is a guarantee for higher human resource output. Today’s busy and hectic occupational space exposes workers to onset of various risk factors for morbidity. This phenomenon undermines the overall productivity of any organization and erodes profits.
+            A healthy workforce is a guarantee for higher human resource output. Today's busy and hectic occupational space exposes workers to onset of various risk factors for morbidity. This phenomenon undermines the overall productivity of any organization and erodes profits.
           </p>
           <p>
             Lack of mechanisms to monitor and check this phenomenon leads to general indisposition of the workforce and decreased individual productivity levels in the workplace.
@@ -69,13 +70,11 @@ const HealthCoaching = () => {
             Added to this is the prevalent unhealthy lifestyles mainly influenced by poor dietary practices that lead to diseases.
           </p>
           <p>
-            There exists an urgent need to develop coping mechanisms for these emerging challenges that every organization should embrace.
-          </p>
-          <p>
             Centre for Nutritional Healthcare (CNH) offers intervention programs that help plug the drain in corporate profits year after year. The programs restore energy and confidence in the workplaces and help staff redefine their lifestyles for healthier, productive living.
           </p>
-
-          {/* Corporate Coaching Application Form */}
+          <p>
+            The interventions will address risk factors to health that lead to low performance and often occasion absence from duty. This is a win-win situation for both the employee and employer.
+          </p>
           <div className="form-container">
             <h2>Corporate Coaching Application</h2>
             <form className="form">

@@ -28,21 +28,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="objectives-container">
-        <h2>Objectives</h2>
-        <p className="objective">
-          <FaHeartbeat style={{ marginRight: '1rem', color: '#4CAF50' }} />
-          Transform healthcare through proactive disruption of the disease cycle.
-        </p>
-        <p className="objective">
-          <FaAppleAlt style={{ marginRight: '1rem', color: '#4CAF50' }} />
-          Increase public awareness of quality nutritional and lifestyle practices for healthier lives and longevity.
-        </p>
-        <p className="objective">
-          <FaCarrot style={{ marginRight: '1rem', color: '#4CAF50' }} />
-          Develop awareness on the impact of environment on nutrition and healthy living.
-        </p>
-      </div>
+     
     </div>
   )
 }
