@@ -37,5 +37,5 @@ mongoose.connect(process.env.MONGO_URI, {
 });
 
 app.get('/', (req, res) => {
-  res.status(200).json({ message: 'Welcome to the Resource API 81' });
+  res.status(200).json({ message: 'CLOUD SERVER RUNNING DATABASE ACTIVE' });
 });
