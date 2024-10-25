@@ -31,7 +31,7 @@ const Education = () => {
           <p>Today, 90% of the global disease burden is caused by the consumption of these low-nutrient, high-calorie foods. Unfortunately, the government agenda globally is not keen on regulating the artificial food industry in favor of the consumer as this would disrupt trade dynamics and upset the much-needed revenue flow.</p>
           <p>Food preparation additives, processed food preservatives, artificial sweeteners, and nutrients are today obvious risk factors for several chronic degenerative diseases that plague society.</p>
           <p>Under these circumstances, the need for consumer empowerment has never been so dire. The majority of consumers are hurtling blindly to the cliff as they do not understand the cause and effect of the disease cycle associated with this phenomenon.</p>
-          <p>Centre for Nutritional Healthcare has put together tools to empower consumers, enable them to make the right choices, and give them the much-needed independence to pure health.</p>
+          <p>Centre for Nutritional Healthcare has put together tools  to empower consumers, enable them to make the right choices, and give them the much-needed independence to pure health.</p>
         </>
       )
     } else if (content === "Strategies For Alternative Healthcare") {
