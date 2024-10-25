@@ -1,5 +1,5 @@
 const express = require('express');
-const bcrypt = require('bcrypt');
+const argon2 = require('argon2');
 const jwt = require('jsonwebtoken');
 const router = express.Router();
 const User = require('../models/User');
@@ -24,8 +24,8 @@ router.post('/register', async (req, res) => {
     });
 
     // Hash password
-    const salt = await bcrypt.genSalt(10);
-    user.password = await bcrypt.hash(password, salt);
+    const salt = await argon2.genSalt(10);
+    user.password = await argon2.hash(password, salt);
 
     await user.save();
 
@@ -51,7 +51,7 @@ router.post('/login', async (req, res) => {
     if (!user) return res.status(400).json({ msg: 'Invalid Credentials' });
 
     // Compare password
-    const isMatch = await bcrypt.compare(password, user.password);
+    const isMatch = await argon2.compare(password, user.password);
     if (!isMatch) return res.status(400).json({ msg: 'Invalid Credentials' });
 
     // Create JWT

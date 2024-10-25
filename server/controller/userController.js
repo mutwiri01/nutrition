@@ -1,5 +1,5 @@
 const User = require('../models/User');
-const bcrypt = require('bcrypt');
+const argon2 = require('argon2');
 const jwt = require('jsonwebtoken');
 
 // Register a new regular user
@@ -14,7 +14,7 @@ exports.registerUser = async (req, res) => {
     }
 
     // Hash the password
-    const hashedPassword = await bcrypt.hash(password, 10);
+    const hashedPassword = await argon2.hash(password, 10);
 
     // Create a new user with `isAdmin` set to false by default
     const newUser = new User({
@@ -49,7 +49,7 @@ exports.registerAdmin = async (req, res) => {
     }
 
     // Hash the password
-    const hashedPassword = await bcrypt.hash(password, 10);
+    const hashedPassword = await argon2.hash(password, 10);
 
     // Create a new user with `isAdmin` set to true
     const newAdmin = new User({
