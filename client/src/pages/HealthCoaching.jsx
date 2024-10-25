@@ -42,11 +42,14 @@ const HealthCoaching = () => {
     setSuccessMessage(""); // Clear previous success message
 
     try {
-      const response = await fetch("https://cloudnutri.vercel.app/api/forms/personal", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(personalFormData),
-      });
+      const response = await fetch(
+        "https://cloudnutri.vercel.app/api/forms/personal",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(personalFormData),
+        }
+      );
 
       if (response.ok) {
         setSuccessMessage("Personal coaching data submitted successfully!");
@@ -74,11 +77,14 @@ const HealthCoaching = () => {
     setSuccessMessage(""); // Clear previous success message
 
     try {
-      const response = await fetch("https://cloudnutri.vercel.app/api/forms/corporate", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(corporateFormData),
-      });
+      const response = await fetch(
+        "https://cloudnutri.vercel.app/api/forms/corporate",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(corporateFormData),
+        }
+      );
 
       if (response.ok) {
         setSuccessMessage("Corporate coaching data submitted successfully!");
@@ -132,7 +138,14 @@ const HealthCoaching = () => {
             Bio-individuality is a nutritional concept that recognizes and
             respects the unique biological nature of every person. The human
             genome dictates that no two persons may possess the same biological
-            identity...
+            identity and therefore our bodies are tuned to respond variously to
+            similar stimuli. In dealing with the body's response to homeostatic
+            threats, it is imperative to understand and respect this principle
+            so as to assign respective and effective interventions. Centre for
+            Nutritional Healthcare offers individual health coaching programs
+            tailored to help you overcome health threats and challenges through
+            behavior and lifestyle change. These programs will address primary
+            and secondary food as stimulants for change in the body.
           </p>
 
           {/* Health History Form */}
@@ -188,8 +201,24 @@ const HealthCoaching = () => {
         <div className="section">
           <h2>Corporate Health Coaching</h2>
           <p>
-            A healthy workforce is a guarantee for higher human resource
-            output...
+            A healthy workforce is a guarantee for higher human resource output.
+            Today's busy and hectic occupational space exposes workers to onset
+            of various risk factors for morbidity. This phenomenon undermines
+            the overall productivity of any organization and erodes profits.
+            Lack of mechanisms to monitor and check this phenomenon leads to
+            general indisposition of the workforce and decreased individual
+            productivity levels in the workplace. Added to this is the prevalent
+            unhealthy lifestyles mainly influenced by poor dietary practices
+            that lead to diseases. There exists an urgent need to develop coping
+            mechanisms for these emerging challenges that every organization
+            should embrace. Centre for Nutritional Healthcare (CNH) offers
+            intervention programs that help plug the drain in corporate profits
+            year after year. The programs restore energy and confidence in the
+            workplaces and help staff redefine their lifestyles for healthier,
+            productive living. The interventions will address risk factors to
+            health that lead to low performance and often occasion absence from
+            duty. This is a win-win situation for both the employee and
+            employer.
           </p>
 
           {/* Corporate Coaching Application Form */}
