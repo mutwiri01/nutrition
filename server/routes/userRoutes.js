@@ -19,14 +19,13 @@ router.post('/register', async (req, res) => {
       firstName,
       lastName,
       email,
-      password,
       isAdmin: isAdmin || false, // Default to false if isAdmin is not provided
     });
 
     // Hash password
-    const salt = await argon2.genSalt(10);
-    user.password = await argon2.hash(password, salt);
+    user.password = await argon2.hash(password);
 
+    // Save user to database
     await user.save();
 
     // Create JWT
@@ -46,12 +45,12 @@ router.post('/login', async (req, res) => {
   try {
     const { email, password } = req.body;
 
-    // Check for user existence
+    // Check if the user exists
     let user = await User.findOne({ email });
     if (!user) return res.status(400).json({ msg: 'Invalid Credentials' });
 
     // Compare password
-    const isMatch = await argon2.compare(password, user.password);
+    const isMatch = await argon2.verify(user.password, password);
     if (!isMatch) return res.status(400).json({ msg: 'Invalid Credentials' });
 
     // Create JWT

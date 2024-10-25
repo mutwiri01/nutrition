@@ -42,7 +42,7 @@ const HealthCoaching = () => {
     setSuccessMessage(""); // Clear previous success message
 
     try {
-      const response = await fetch("http://localhost:5000/api/forms/personal", {
+      const response = await fetch("https://cloudnutri.vercel.app/api/forms/personal", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(personalFormData),
@@ -74,7 +74,7 @@ const HealthCoaching = () => {
     setSuccessMessage(""); // Clear previous success message
 
     try {
-      const response = await fetch("http://localhost:5000/api/forms/corporate", {
+      const response = await fetch("https://cloudnutri.vercel.app/api/forms/corporate", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(corporateFormData),
