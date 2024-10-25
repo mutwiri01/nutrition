@@ -1,0 +1,26 @@
+.dashboard {
+  padding: 20px;
+}
+
+h1,
+h2 {
+  font-size: 24px;
+  margin: 20px 0;
+}
+
+.submissions-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 40px;
+}
+
+.submissions-table th,
+.submissions-table td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+}
+
+.error-message {
+  color: red;
+}

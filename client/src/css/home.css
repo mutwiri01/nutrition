@@ -1,5 +1,5 @@
 /* home.css */
-.page-container {
+.home-container {
   width: 100%;
   max-width: 1200px;
   display: flex;
@@ -11,63 +11,73 @@
   box-sizing: border-box;
 }
 
-.header-container {
+.home-header {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   margin-bottom: 2rem;
   width: 100%;
 }
 
-.title {
-  color: #4caf50;
-  font-size: 3rem;
+.home-title {
+  color: #4caf50; /* Color of the title */
+  font-size: 3rem; /* Font size for large screens */
+  text-align: center; /* Center the text */
+  margin: 0; /* Remove default margin */
 }
 
-.image {
-  max-width: 400px; /* Increased the width of the image */
-  height: auto;
-  margin-left: 1rem;
+@media (max-width: 768px) {
+  .home-title {
+    font-size: 2.5rem; /* Font size for medium screens */
+  }
 }
 
-.subtitle {
-  font-size: 1.2rem;
-  color: #666;
-  max-width: 800px;
-  margin-bottom: 3rem;
+@media (max-width: 480px) {
+  .home-title {
+    font-size: 2rem; /* Font size for small screens */
+  }
 }
 
-.icon-container {
+.home-subtitle {
+  font-size: 1.2rem; /* Subtitle font size */
+  color: #666; /* Subtitle color */
+  max-width: 800px; /* Maximum width for subtitle */
+  margin-bottom: 3rem; /* Margin below subtitle */
+}
+
+.home-icon-container {
   display: flex;
-  justify-content: center;
-  gap: 3rem;
-  margin-bottom: 3rem;
+  justify-content: center; /* Center the icons */
+  gap: 3rem; /* Space between icons */
+  margin-bottom: 3rem; /* Margin below icons */
 }
 
-.icon-wrapper {
+.home-icon-wrapper {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: center; /* Center icon and text */
 }
 
-.icon {
-  font-size: 3rem;
-  color: #4caf50;
-  margin-bottom: 1rem;
+.home-icon {
+  font-size: 3rem; /* Icon size */
+  color: #4caf50; /* Icon color */
+  margin-bottom: 1rem; /* Margin below icons */
 }
 
-.icon-text {
-  font-weight: bold;
-  color: #333;
+.home-icon-text {
+  font-weight: bold; /* Bold text for icon labels */
+  color: #333; /* Color for icon labels */
 }
 
-.objectives-container {
+/* Additional styling for objectives if needed */
+.home-objectives-container {
   text-align: left;
   margin-top: 2rem;
   max-width: 800px;
 }
 
-.objective {
+.home-objective {
   font-size: 1.1rem;
   color: #333;
   margin-bottom: 1rem;

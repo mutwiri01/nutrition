@@ -1,36 +1,33 @@
-
-import { FaAppleAlt, FaCarrot, FaHeartbeat } from 'react-icons/fa'
-import '../css/home.css' // Import the CSS file
+import { FaAppleAlt, FaCarrot, FaHeartbeat } from 'react-icons/fa';
+import '../css/home.css'; // Import the CSS file
 
 const Home = () => {
   return (
-    <div className="page-container">
-      <div >
-        <h1 className="title">Centre for Nutritional Healthcare</h1>
+    <div className="home-container">
+      <div className="home-header">
+        <h1 className="home-title">Centre for Nutritional Healthcare</h1>
       </div>
 
-      <p className="subtitle">
+      <p className="home-subtitle">
         Centre for Nutritional Healthcare delivers natural healthcare solutions that are sustainable, comprehensive, and restorative. We believe that perfect health can be achieved by modulating nutrition and lifestyle in an eco-friendly space.
       </p>
 
-      <div className="icon-container">
-        <div className="icon-wrapper">
-          <div className="icon"><FaAppleAlt /></div>
-          <p className="icon-text">Healthy Eating</p>
+      <div className="home-icon-container">
+        <div className="home-icon-wrapper">
+          <div className="home-icon"><FaAppleAlt /></div>
+          <p className="home-icon-text">Healthy Eating</p>
         </div>
-        <div className="icon-wrapper">
-          <div className="icon"><FaCarrot /></div>
-          <p className="icon-text">Natural Solutions</p>
+        <div className="home-icon-wrapper">
+          <div className="home-icon"><FaCarrot /></div>
+          <p className="home-icon-text">Natural Solutions</p>
         </div>
-        <div className="icon-wrapper">
-          <div className="icon"><FaHeartbeat /></div>
-          <p className="icon-text">Holistic Health</p>
+        <div className="home-icon-wrapper">
+          <div className="home-icon"><FaHeartbeat /></div>
+          <p className="home-icon-text">Holistic Health</p>
         </div>
       </div>
-
-     
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

@@ -9,6 +9,9 @@ import Projects from './pages/Projects'
 import Research from './pages/Research'
 import ResourceCenter from './pages/ResourceCenter'
 import Support from './pages/Support'
+import Login from './components/Login';
+import Register from './components/Register';
+import AdminDashboard from './pages/AdminDashboard';
 
 
 
@@ -26,6 +29,9 @@ function App() {
             <Route path="/research" element={<Research />} />
             <Route path="/resource-center" element={<ResourceCenter />} />
             <Route path="/support" element={<Support />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<Register />} />
+            <Route path="/admin-dashboard" element={<AdminDashboard />} />
           </Routes>
         <Footer />
     </Router>

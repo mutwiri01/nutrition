@@ -7,36 +7,34 @@
 
 .nav {
   display: flex;
-  justify-content: space-between; /* This will space out items */
+  justify-content: space-between;
   align-items: center;
-  width: 100%; /* Ensure the nav takes full width */
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0; /* Remove padding to ensure it's fully to the left */
+  padding: 0 2rem;
 }
 
 .logo {
-  display: flex;
-  align-items: center;
   color: #ffffff;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-weight: bold;
   text-decoration: none;
-  margin-left: 0; /* No margin on the left */
-  padding-left: 1rem; /* Optional: small padding to keep away from edge */
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Ensure the logo is aligned left */
+  flex-grow: 0; /* Prevent the logo from taking extra space */
 }
 
 .nav-links {
   display: flex;
   gap: 1.5rem;
-  margin-left: auto; /* Push links to the right */
+  margin-left: 4rem; /* Increased margin-left for more space from the logo */
 }
 
 .nav-link {
   color: #ffffff;
   text-decoration: none;
   font-weight: 500;
-  font-size: 0.9rem;
   transition: color 0.3s;
 }
 
@@ -62,18 +60,14 @@
     right: 0;
     background-color: #4caf50;
     padding: 1rem;
-    display: none;
+    display: none; /* Initially hide the links */
   }
 
   .nav-links.open {
-    display: flex;
+    display: flex; /* Show links when menu is open */
   }
 
   .menu-button {
-    display: block;
-  }
-
-  .logo {
-    font-size: 1.2rem;
+    display: block; /* Show menu button on mobile */
   }
 }
