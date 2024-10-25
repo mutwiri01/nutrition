@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import '../css/Education.css'
+import '../css/education.css'
 import {  FaLeaf ,FaHeartbeat} from 'react-icons/fa'
 
 const Education = () => {
