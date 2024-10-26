@@ -95,7 +95,7 @@ const Education = () => {
       {modalContent && (
         <div className="modal active">
           <div className="modal-content">
-            <h3>Details</h3>
+            
             {modalContent}
             <button className="close-button" onClick={closeModal}>Close</button>
           </div>

@@ -21,14 +21,14 @@
   text-decoration: none;
   display: flex;
   align-items: center;
-  justify-content: flex-start; /* Ensure the logo is aligned left */
-  flex-grow: 0; /* Prevent the logo from taking extra space */
+  justify-content: flex-start;
+  flex-grow: 0;
 }
 
 .nav-links {
   display: flex;
   gap: 1.5rem;
-  margin-left: 4rem; /* Increased margin-left for more space from the logo */
+  margin-left: 4rem;
 }
 
 .nav-link {
@@ -60,14 +60,15 @@
     right: 0;
     background-color: #4caf50;
     padding: 1rem;
-    display: none; /* Initially hide the links */
+    display: none;
+    transition: all 0.3s ease-in-out;
   }
 
   .nav-links.open {
-    display: flex; /* Show links when menu is open */
+    display: flex;
   }
 
   .menu-button {
-    display: block; /* Show menu button on mobile */
+    display: block;
   }
 }

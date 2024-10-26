@@ -94,7 +94,7 @@ const Projects = () => {
 
   return (
     <PageContainer>
-      <Title>Interventions and Projects</Title>
+      <Title>Projects</Title>
       <Grid>
         <Card>
           <Icon><FaSeedling /></Icon>
