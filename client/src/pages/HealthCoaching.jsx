@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { FaUser, FaBuilding } from "react-icons/fa"; // Import icons
+import { FaUser, FaBuilding } from "react-icons/fa";
 import "../css/healthcoaching.css";
 
 const HealthCoaching = () => {
@@ -15,14 +15,14 @@ const HealthCoaching = () => {
     numberOfMembers: "",
     programFeatures: "",
   });
-  const [loading, setLoading] = useState(false); // Loading state
-  const [error, setError] = useState(""); // Error message
-  const [successMessage, setSuccessMessage] = useState(""); // Success message
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
+  const [successMessage, setSuccessMessage] = useState("");
 
   const switchSection = (section) => {
     setActiveSection(activeSection === section ? "" : section);
-    setSuccessMessage(""); // Clear success message on section switch
-    setError(""); // Clear error message on section switch
+    setSuccessMessage("");
+    setError("");
   };
 
   const handlePersonalInputChange = (e) => {
@@ -37,9 +37,9 @@ const HealthCoaching = () => {
 
   const handlePersonalFormSubmit = async (e) => {
     e.preventDefault();
-    setLoading(true); // Start loading
-    setError(""); // Clear previous error
-    setSuccessMessage(""); // Clear previous success message
+    setLoading(true);
+    setError("");
+    setSuccessMessage("");
 
     try {
       const response = await fetch(
@@ -66,15 +66,15 @@ const HealthCoaching = () => {
     } catch (err) {
       setError(`Error: ${err.message}`);
     } finally {
-      setLoading(false); // Stop loading
+      setLoading(false);
     }
   };
 
   const handleCorporateFormSubmit = async (e) => {
     e.preventDefault();
-    setLoading(true); // Start loading
-    setError(""); // Clear previous error
-    setSuccessMessage(""); // Clear previous success message
+    setLoading(true);
+    setError("");
+    setSuccessMessage("");
 
     try {
       const response = await fetch(
@@ -100,7 +100,7 @@ const HealthCoaching = () => {
     } catch (err) {
       setError(`Error: ${err.message}`);
     } finally {
-      setLoading(false); // Stop loading
+      setLoading(false);
     }
   };
 
@@ -108,21 +108,16 @@ const HealthCoaching = () => {
     <div className="page-container">
       <h1 className="title">Health Coaching</h1>
 
-      {/* Coaching Type Cards */}
       <div className="card-container">
         <div
-          className={`card ${
-            activeSection === "personal" ? "active-card" : ""
-          }`}
+          className={`card ${activeSection === "personal" ? "active-card" : ""}`}
           onClick={() => switchSection("personal")}
         >
           <FaUser className="icon" />
           <h3>Personal Coaching</h3>
         </div>
         <div
-          className={`card ${
-            activeSection === "corporate" ? "active-card" : ""
-          }`}
+          className={`card ${activeSection === "corporate" ? "active-card" : ""}`}
           onClick={() => switchSection("corporate")}
         >
           <FaBuilding className="icon" />
@@ -130,35 +125,17 @@ const HealthCoaching = () => {
         </div>
       </div>
 
-      {/* Error or Success Message */}
       {error && <div className="error-message">{error}</div>}
-      {successMessage && (
-        <div className="success-message">{successMessage}</div>
-      )}
+      {successMessage && <div className="success-message">{successMessage}</div>}
 
-      {/* Section Content */}
       {activeSection === "personal" && (
         <div className="section">
           <h2>Personal Health Coaching</h2>
           <p>
-            Bio-individuality is a nutritional concept that recognizes and
-            respects the unique biological nature of every person. The human
-            genome dictates that no two persons may possess the same biological
-            identity and therefore our bodies are tuned to respond variously to
-            similar stimuli.
+            Bio-individuality is a nutritional concept that recognizes the unique biological nature of every person.
           </p>
-          <p>
-            In dealing with the body's response to homeostatic threats, it is
-            imperative to understand and respect this principle so as to assign
-            respective and effective interventions.
-          </p>
-          Centre for Nutritional Healthcare offers individual health coaching
-          programs tailored to help you overcome health threats and challenges
-          through behavior and lifestyle change. These programs will address
-          primary and secondary food as stimulants for change in the body.
-          <p></p>
           <div className="form-container">
-            <h2>Please use the form below to  register with us</h2>
+            <h2>Register with us</h2>
             <form className="form" onSubmit={handlePersonalFormSubmit}>
               <input
                 type="text"
@@ -195,11 +172,7 @@ const HealthCoaching = () => {
                 onChange={handlePersonalInputChange}
                 required
               />
-              <button
-                type="submit"
-                className="submit-button"
-                disabled={loading}
-              >
+              <button type="submit" className="submit-button" disabled={loading}>
                 {loading ? "Submitting..." : "Submit"}
               </button>
             </form>
@@ -210,39 +183,7 @@ const HealthCoaching = () => {
       {activeSection === "corporate" && (
         <div className="section">
           <h2>Corporate Health Coaching</h2>
-          <p>
-            A healthy workforce is a guarantee for higher human resource output.
-            Today's busy and hectic occupational space exposes workers to onset
-            of various risk factors for morbidity. This phenomenon undermines
-            the overall productivity of any organization and erodes profits.
-          </p>
-          <p>
-            Lack of mechanisms to monitor and check this phenomenon leads to
-            general indisposition of the workforce and decreased individual
-            productivity levels in the workplace.
-          </p>
-          <p>
-            Added to this is the prevalent unhealthy lifestyles mainly
-            influenced by poor dietary practices that lead to diseases.{" "}
-          </p>
-          <p>
-            There exists an urgent need to develop coping mechanisms for these
-            emerging challenges that every organization should embrace.
-          </p>
-          <p>
-            Centre for Nutritional Healthcare (CNH) offers intervention programs
-            that help plug the drain in corporate profits year after year.
-          </p>
-          <p>
-            The programs restore energy and confidence in the workplaces and
-            help staff redefine their lifestyles for healthier, productive
-            living.
-          </p>
-          <p>
-            The interventions will address risk factors to health that lead to
-            low performance and often occasion absence from duty. This is a
-            win-win situation for both the employee and employer.
-          </p>
+          <p>A healthy workforce ensures higher productivity and well-being.</p>
           <div className="form-container">
             <h2>Corporate Coaching Application</h2>
             <form className="form" onSubmit={handleCorporateFormSubmit}>
@@ -277,11 +218,7 @@ const HealthCoaching = () => {
                 <option value="Stress Management">Stress Management</option>
                 <option value="Health Checkups">Health Checkups</option>
               </select>
-              <button
-                type="submit"
-                className="submit-button"
-                disabled={loading}
-              >
+              <button type="submit" className="submit-button" disabled={loading}>
                 {loading ? "Applying..." : "Apply for Corporate Coaching"}
               </button>
             </form>

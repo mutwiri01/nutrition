@@ -4,9 +4,7 @@ import '../css/home.css'; // Import the CSS file
 const Home = () => {
   return (
     <div className="home-container">
-      <div className="home-header">
-        <h1 className="home-title">Centre for Nutritional Healthcare</h1>
-      </div>
+
 
       <p className="home-subtitle">
         Centre for Nutritional Healthcare delivers natural healthcare solutions that are sustainable, comprehensive, and restorative. We believe that perfect health can be achieved by modulating nutrition and lifestyle in an eco-friendly space.
