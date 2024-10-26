@@ -132,8 +132,11 @@ const HealthCoaching = () => {
         <div className="section">
           <h2>Personal Health Coaching</h2>
           <p>
-            Bio-individuality is a nutritional concept that recognizes the unique biological nature of every person.
+          Bio-individuality is a nutritional concept that recognizes and respects the unique biological nature of every person. The human genome dictates that no two persons may possess the same biological identity and therefore our bodies are tuned to respond variously to similar stimuli. 
           </p>
+          <p>In dealing with the body's response to homeostatic threats, it is imperative to understand and respect this principle so as to assign respective and effective interventions.</p>
+          <p>Centre for Nutritional Healthcare offers individual health coaching programs tailored to help you overcome health threats and challenges through behavior and lifestyle change. These programs will address primary and secondary food as stimulants for change in the body.</p>
+
           <div className="form-container">
             <h2>Register with us</h2>
             <form className="form" onSubmit={handlePersonalFormSubmit}>
@@ -183,7 +186,14 @@ const HealthCoaching = () => {
       {activeSection === "corporate" && (
         <div className="section">
           <h2>Corporate Health Coaching</h2>
-          <p>A healthy workforce ensures higher productivity and well-being.</p>
+          <p>A healthy workforce is a guarantee for higher human resource output. Today's busy and hectic occupational space exposes workers to onset of various risk factors for morbidity. This phenomenon undermines the overall productivity of any organization and erodes profits.</p>
+          <p>Lack of mechanisms to monitor and check this phenomenon leads to general indisposition of the workforce and decreased individual productivity levels in the workplace.</p>
+          <p>Added to this is the prevalent unhealthy lifestyles mainly influenced by poor dietary practices that lead to diseases. </p>
+          <p>There exists an urgent need to develop coping mechanisms for these emerging challenges that every organization should embrace. </p>
+          <p>Centre for Nutritional Healthcare (CNH) offers intervention programs that help plug the drain in corporate profits year after year.</p>
+          <p>The programs restore energy and confidence in the workplaces and help staff redefine their lifestyles for healthier, productive living. </p>
+          <p>The interventions will address risk factors to health that lead to low performance and often occasion absence from duty. This is a win-win situation for both the employee and employer.</p>
+
           <div className="form-container">
             <h2>Corporate Coaching Application</h2>
             <form className="form" onSubmit={handleCorporateFormSubmit}>
