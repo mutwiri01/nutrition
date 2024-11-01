@@ -1,0 +1,209 @@
+/* ResourceCenter.css */
+
+.PageContainer {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+.Title {
+  color: #4CAF50;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.Grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  width: 100%;
+}
+
+.Card {
+  background-color: #E8F5E9;
+  border-radius: 8px;
+  padding: 1.5rem;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.Card:hover {
+  transform: translateY(-5px);
+}
+
+.Icon {
+  font-size: 3rem;
+  color: #4CAF50;
+  margin-bottom: 1rem;
+}
+
+.CardTitle {
+  color: #2C3E50;
+  margin-bottom: 1rem;
+}
+
+.JoinSection {
+  margin-top: 3rem;
+  text-align: center;
+  width: 100%;
+}
+
+.JoinTitle {
+  color: #4CAF50;
+  margin-bottom: 1rem;
+}
+
+.JoinDescription {
+  margin-bottom: 1rem;
+}
+
+.Button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.Button:hover {
+  background-color: #45a049;
+}
+
+.TopicsList {
+  margin-top: 2rem;
+}
+
+.TopicsList ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.TopicsList li {
+  cursor: pointer;
+  margin: 1rem 0;
+  display: flex;
+  align-items: center;
+}
+
+.TopicIcon {
+  font-size: 1.5rem;
+  margin-right: 0.5rem;
+}
+
+.TopicContent {
+  margin-top: 2rem;
+  padding: 1rem;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+}
+
+.CloseButton {
+  background-color: #f44336;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: background-color 0.3s;
+}
+
+.CloseButton:hover {
+  background-color: #d32f2f;
+}
+
+.PageContainer {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  text-align: center;
+}
+
+.Title {
+  color: #4CAF50;
+  margin-bottom: 20px;
+}
+
+.Grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.Card {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 20px;
+  width: 300px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.Card:hover {
+  background-color: #f0f0f0;
+}
+
+.Icon {
+  font-size: 40px;
+  color: #4CAF50;
+}
+
+.CardTitle {
+  margin-top: 10px;
+  color: #333;
+}
+
+.TopicsList ul {
+  list-style-type: none;
+  padding: 0;
+  color: #333;
+}
+
+.TopicsList li {
+  padding: 10px;
+  font-size: 1.1em;
+  cursor: pointer;
+}
+
+.TopicContent {
+  text-align: left;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.ContentText p {
+  margin-bottom: 10px;
+}
+
+.CloseButton {
+  background-color: #4CAF50;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-top: 20px;
+}
+
+.JoinSection {
+  margin-top: 40px;
+}
+
+.JoinTitle, .JoinDescription {
+  color: #333;
+}
+
+.Button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}

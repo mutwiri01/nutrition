@@ -7,21 +7,21 @@ const Home = () => {
 
 
       <p className="home-subtitle">
-        Centre for Nutritional Healthcare delivers natural healthcare solutions that are sustainable, comprehensive, and restorative. We believe that perfect health can be achieved by modulating nutrition and lifestyle in an eco-friendly space.
+        Centre for Nutritional Healthcare delivers natural healthcare solutions that are sustainable, comprehensive, and restorative.  Our contribution to better health is guided by modulating nutrition and lifestyles within communities and restoring ecosystems to sustain and prolong lives.
       </p>
 
       <div className="home-icon-container">
         <div className="home-icon-wrapper">
           <div className="home-icon"><FaAppleAlt /></div>
-          <p className="home-icon-text">Healthy Eating</p>
-        </div>
-        <div className="home-icon-wrapper">
-          <div className="home-icon"><FaCarrot /></div>
-          <p className="home-icon-text">Natural Solutions</p>
+          <p className="home-icon-text">Redefine healthcare </p>
         </div>
         <div className="home-icon-wrapper">
           <div className="home-icon"><FaHeartbeat /></div>
-          <p className="home-icon-text">Holistic Health</p>
+          <p className="home-icon-text">Transform lifestyles </p>
+        </div>
+        <div className="home-icon-wrapper">
+          <div className="home-icon">< FaCarrot/></div>
+          <p className="home-icon-text">Restore ecosystems</p>
         </div>
       </div>
     </div>
