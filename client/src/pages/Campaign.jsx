@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { FaBalanceScale, FaCarrot, FaRunning } from "react-icons/fa";
+import { FaBalanceScale, FaCarrot, FaRunning, FaMedkit } from "react-icons/fa";
 import PropTypes from "prop-types";
 import "../css/Campaign.css";
 
@@ -31,6 +31,7 @@ const Campaign = () => {
   const [showProteinModal, setShowProteinModal] = useState(false);
   const [showPlateModal, setShowPlateModal] = useState(false);
   const [showWaterModal, setShowWaterModal] = useState(false);
+  const [showHealthFreedomModal, setShowHealthFreedomModal] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -48,6 +49,7 @@ const Campaign = () => {
           <h3 className="card-title">Food Justice</h3>
           <p>Promoting equal access to nutritious food for all.</p>
         </div>
+
         <div className="card">
           <div className="icon">
             <FaCarrot />
@@ -71,10 +73,17 @@ const Campaign = () => {
             </li>
           </ul>
         </div>
-        
+
+        <div className="card" onClick={() => setShowHealthFreedomModal(true)}>
+          <div className="icon">
+            <FaMedkit />
+          </div>
+          <h3 className="card-title">Health Freedom</h3>
+          <p>Campaign Against Self Medication</p>
+        </div>
       </div>
 
-      {/* Food Justice Modal */}
+      {/* Modals for each campaign */}
       <Modal show={showModal} onClose={() => setShowModal(false)}>
         <h2>FOOD JUSTICE</h2>
         <p>
@@ -139,7 +148,6 @@ const Campaign = () => {
         </p>
       </Modal>
 
-      {/* Nutrient Harvest Modal */}
       <Modal
         show={showNutrientModal}
         onClose={() => setShowNutrientModal(false)}
@@ -176,7 +184,6 @@ const Campaign = () => {
         </p>
       </Modal>
 
-      {/* Plant Protein Initiative Modal */}
       <Modal show={showProteinModal} onClose={() => setShowProteinModal(false)}>
         <h2>Plant Protein Initiative</h2>
         <p>
@@ -185,7 +192,6 @@ const Campaign = () => {
         </p>
       </Modal>
 
-      {/* The National Food Plate Modal */}
       <Modal show={showPlateModal} onClose={() => setShowPlateModal(false)}>
         <h2>The National Food Plate</h2>
         <p>
@@ -194,12 +200,51 @@ const Campaign = () => {
         </p>
       </Modal>
 
-      {/* Water Campaign Modal */}
       <Modal show={showWaterModal} onClose={() => setShowWaterModal(false)}>
         <h2>Water Campaign</h2>
         <p>
           Highlighting the importance of water for health and sustainable
           consumption practices...
+        </p>
+      </Modal>
+
+      {/* Health Freedom Modal */}
+      <Modal
+        show={showHealthFreedomModal}
+        onClose={() => setShowHealthFreedomModal(false)}
+      >
+        <h2>Campaign Against Self Medication</h2>
+        <p>
+          The unfettered use of over-the-counter (OTC) drugs and self
+          prescriptions is a major health concern in society today. Reduced
+          control and surveillance at drug outlets and administration of
+          medicines by semi-qualified personnel has exposed consumers to danger
+          and worsened the existing health crisis.
+        </p>
+        <p>
+          Today, many people do not need to consult physicians as technology
+          enables them to learn about their symptoms and recommend
+          prescriptions. They then proceed to pharmaceutical outlets for their
+          doses of medicine and start their journeys to "recovery."
+        </p>
+        <p>
+          Unless a qualified medical personnel examines a patient to diagnose
+          ailment, a lot is left to chance and may complicate chances of full
+          and proper recovery. In most of these cases, misdiagnosis leads to
+          usage of the wrong medication and the consequences are dire.
+        </p>
+        <p>
+          Self-medication also occurs when symptoms of a sickness previously
+          treated recurs. Instead of patients seeking further advice, they walk
+          to chemists with previous prescriptions and purchase medicine to
+          manage these conditions. In many cases, the same symptoms may
+          represent other illnesses, requiring comprehensive examinations.
+        </p>
+        <p>
+          All medical procedures should be preceded by exposing the root cause
+          of disease. Self-medication is based on quelling symptoms in the short
+          term and postponing the problem in the long term. There is a pressing
+          need for public sensitization to foster behavior change in this area.
         </p>
       </Modal>
 
